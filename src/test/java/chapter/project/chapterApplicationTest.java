@@ -5,7 +5,7 @@ import chapter.project.chapter02.properties.PetPerson;
 import chapter.project.chapter03.batis.BatisCommentMapper;
 import chapter.project.chapter03.jpa.JpaDiscussRepository;
 import chapter.project.chapter03.redis.RedisPersonRepository;
-import org.junit.Test;
+import chapter.project.chapter04.LoginController;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -38,18 +38,22 @@ public class chapterApplicationTest {
     @Autowired
     private RedisPersonRepository redisPersonRepository;
 
-    @Test //chapter01测试方法
+    //chapter
+    @Autowired
+    private LoginController loginController;
+
+    /*@Test //chapter01测试方法
     public void Chapter01() {
 
         System.out.println(TAG + "单元测试返回的数据：" + chapterController.sayHello());
 
-    }
+    }*/
 
-    @Test
+   /* @Test
     public void Chapter02() {
         System.out.println("properties01单元测试返回的数据：" + petPerson);
 
-    }
+    }*/
 
 
     //@Test //chapter01测试方法
@@ -79,23 +83,28 @@ public class chapterApplicationTest {
     //List<JpaDiscuss> jpalist = jpaDiscussRepository.findByAuthorNotNull();
     //System.out.println(jpalist);
 
-        /*//redis实现，实现数据库操作
-        RedisPerson redisPerson = new RedisPerson("张", "有才");
-        RedisPerson redisPerson2 = new RedisPerson("James", "Harden");
-        // 创建并添加住址信息
-        RedisAddress redisAddress = new RedisAddress("北京", "China");
-        redisPerson.setRedisAddress(redisAddress);
-        // 创建并添加家庭成员
-        List<RedisFamily> redislist = new ArrayList<>();
-        RedisFamily dad = new RedisFamily("父亲", "张良");
-        RedisFamily mom = new RedisFamily("母亲", "李香君");
-        redislist.add(dad);
-        redislist.add(mom);
-        redisPerson.setRedisFamilyList(redislist);
-        // 向Redis数据库添加数据
-        RedisPerson save = redisPersonRepository.save(redisPerson);
-        RedisPerson save2 = redisPersonRepository.save(redisPerson2);
-        System.out.println(save);
-        System.out.println(save2);*/
+    /*//redis实现，实现数据库操作
+    RedisPerson redisPerson = new RedisPerson("张", "有才");
+    RedisPerson redisPerson2 = new RedisPerson("James", "Harden");
+    // 创建并添加住址信息
+    RedisAddress redisAddress = new RedisAddress("北京", "China");
+    redisPerson.setRedisAddress(redisAddress);
+    // 创建并添加家庭成员
+    List<RedisFamily> redislist = new ArrayList<>();
+    RedisFamily dad = new RedisFamily("父亲", "张良");
+    RedisFamily mom = new RedisFamily("母亲", "李香君");
+    redislist.add(dad);
+    redislist.add(mom);
+    redisPerson.setRedisFamilyList(redislist);
+    // 向Redis数据库添加数据
+    RedisPerson save = redisPersonRepository.save(redisPerson);
+    RedisPerson save2 = redisPersonRepository.save(redisPerson2);
+    System.out.println(save);
+    System.out.println(save2);*/
     //}
+
+    /*@Test //chapter01测试方法
+    public void Chapter04() {
+
+    }*/
 }
