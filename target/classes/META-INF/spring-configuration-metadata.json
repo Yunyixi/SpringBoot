@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "petpersonyaml",
+      "type": "chapter.project.chapter02.properties.PetPerson",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    }
+  ],
+  "properties": [
+    {
+      "name": "petpersonyaml.family",
+      "type": "java.lang.String[]",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    },
+    {
+      "name": "petpersonyaml.hobby",
+      "type": "java.util.List",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    },
+    {
+      "name": "petpersonyaml.id",
+      "type": "java.lang.Integer",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    },
+    {
+      "name": "petpersonyaml.map",
+      "type": "java.util.Map",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    },
+    {
+      "name": "petpersonyaml.name",
+      "type": "java.lang.String",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    },
+    {
+      "name": "petpersonyaml.pet",
+      "type": "chapter.project.chapter02.properties.Pet",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    }
+  ],
+  "hints": []
+}
