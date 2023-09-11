@@ -11,10 +11,11 @@ import java.util.Map;
  * @Description
  * @Author IDEA
  * @Date 2023/9/7
+ * 使用 @ConfigurationProperties注入属性
  */
-@Component
-//@ConfigurationProperties(prefix = "petperson") //通过全局自定义文件赋值
-@ConfigurationProperties(prefix = "petpersonyaml") //通过yaml文件赋值
+@Component //将类注入到Spring Boot容器中
+@ConfigurationProperties(prefix = "properties") //通过全局自定义文件赋值
+//@ConfigurationProperties(prefix = "properties-yaml") //通过yaml文件赋值
 public class PetPerson {
     private int id;
     private String name;

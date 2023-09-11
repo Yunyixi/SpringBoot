@@ -4,13 +4,13 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1,shrink-to-fit=no" name="viewport">
     <title>用户登录界面</title>
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/css/signin.css}">
+    <link rel="stylesheet" th:href="@{/login/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/login/css/signin.css}">
 </head>
 <body class="text-center">
 <!--  用户登录form表单 -->
 <form class="form-signin">
-    <img class="mb-4" height="72" th:src="@{/img/login.jpg}" width="72">
+    <img class="mb-4" height="72" th:src="@{/login/img/login.jpg}" width="72">
     <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">请登录</h1>
     <input autofocus="" class="form-control"
            required="" th:placeholder="#{login.username}" type="text">

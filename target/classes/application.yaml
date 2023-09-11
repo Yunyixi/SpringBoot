@@ -1,5 +1,5 @@
 ﻿#对实体类对Petperson进行属性配置
-petpersonyaml:
+properties-yaml:
   id: 1002
   name: zhangsan
   hobby: [ ply,read,sleep ]
