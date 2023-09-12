@@ -3,9 +3,8 @@ package chapter.project.chapter03.jpa;
 import javax.persistence.*;
 
 /**
- * @Description
- * @Author IDEA
  * @Date 2023/9/5
+ * @注释
  */
 @Entity(name = "t_comment")
 public class JpaDiscuss {

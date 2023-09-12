@@ -8,10 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Description
- * @Author IDEA
  * @Date 2023/9/7
- * 使用 @ConfigurationProperties注入属性
+ * @注释 使用 @ConfigurationProperties注入属性
  */
 @Component //将类注入到Spring Boot容器中
 @ConfigurationProperties(prefix = "properties") //通过全局自定义文件赋值

@@ -10,9 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
 /**
- * @Description
- * @Author IDEA
  * @Date 2023/9/11
+ * @注释
  */
 @Configuration
 public class LoginLocalResovel implements LocaleResolver {

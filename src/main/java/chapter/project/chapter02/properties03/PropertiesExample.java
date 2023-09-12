@@ -8,9 +8,8 @@ import org.springframework.validation.annotation.Validated;
 import javax.validation.constraints.Email;
 
 /**
- * @Description
- * @Author IDEA
  * @Date 2023/9/11
+ * @注释
  */
 @Component //将类注入到Spring Boot容器中
 @ConfigurationProperties(prefix = "user")

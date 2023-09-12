@@ -24,15 +24,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Description
- * @Author IDEA
- * 测试类 用于测试
  * @Date 2023/9/6
+ * @注释 测试类 用于测试
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class chapterApplicationTest {
-    
+
     String TAG = "ChapterApplicationTest";
     //chapter01
     @Autowired

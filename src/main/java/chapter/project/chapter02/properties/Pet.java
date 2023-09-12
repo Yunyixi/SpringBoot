@@ -1,9 +1,8 @@
 package chapter.project.chapter02.properties;
 
 /**
- * @Description
- * @Author IDEA
  * @Date 2023/9/7
+ * @注释
  */
 public class Pet {
     private String type;

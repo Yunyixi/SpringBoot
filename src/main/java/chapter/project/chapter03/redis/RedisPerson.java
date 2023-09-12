@@ -7,9 +7,8 @@ import javax.persistence.Id;
 import java.util.List;
 
 /**
- * @Description
- * @Author IDEA
  * @Date 2023/9/5
+ * @注释
  */
 @RedisHash("persons")
 public class RedisPerson {

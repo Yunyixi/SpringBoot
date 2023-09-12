@@ -4,10 +4,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
- * @Description
- * @Author IDEA
  * @Date 2023/9/11
- * 使用 @Value注入属性
+ * @注释 使用 @Value注入属性
  */
 @Component //将类注入到Spring Boot容器中
 public class ValuePerson {

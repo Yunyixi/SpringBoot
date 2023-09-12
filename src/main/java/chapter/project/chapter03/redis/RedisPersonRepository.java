@@ -7,9 +7,8 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 /**
- * @Description
- * @Author IDEA
  * @Date 2023/9/6
+ * @注释
  */
 public interface RedisPersonRepository extends CrudRepository<RedisPerson, String> {
 

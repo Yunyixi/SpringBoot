@@ -4,9 +4,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Description
- * @Author IDEA
- * @Date 2023/9/6
+ * @Date 2022/12/6
+ * @注释 控制类
  */
 @RestController //用于标记一个类是控制器类，并且该类的方法返回的结果直接作为响应体返回给客户端
 public class ChapterController {

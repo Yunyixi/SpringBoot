@@ -4,9 +4,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 /**
- * @Description
- * @Author IDEA
- * @Date 2023/9/11
+ * @Date 2022/12/11
+ * @注释
  */
 @Configuration
 @Profile("test")

@@ -9,9 +9,8 @@ import java.awt.print.Pageable;
 import java.util.List;
 
 /**
- * @Description
- * @Author IDEA
  * @Date 2023/9/5
+ * @注释
  */
 public interface JpaDiscussRepository extends JpaRepository<JpaDiscuss, Integer> {
 

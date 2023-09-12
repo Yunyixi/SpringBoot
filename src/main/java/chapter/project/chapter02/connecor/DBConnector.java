@@ -1,9 +1,8 @@
 package chapter.project.chapter02.connecor;
 
 /**
- * @Description
- * @Author IDEA
- * @Date 2023/9/11
+ * @Date 2022/12/11
+ * @注释
  */
 public interface DBConnector {
     void configure();
