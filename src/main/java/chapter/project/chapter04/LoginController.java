@@ -13,11 +13,16 @@ import java.util.Calendar;
 @Controller
 public class LoginController {
 
-    @GetMapping("/toLoginPage")
+   /* @GetMapping("/toLoginPage")
 
     public String toLoginPage(Model model) { //返回时间的格式
         // 获取当前的时间
         model.addAttribute("currentYear", Calendar.getInstance().get(Calendar.YEAR));
         return "login";
     }
+
+    public String saytoLoginPage() {
+        return "Hello toLoginPage ";
+
+    }*/
 }

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ChapterController {
 
     //用于将HTTP请求映射到控制器的处理方法上，应该调用哪个方法进行处理。
-    @RequestMapping(value = "/hello")
+    @RequestMapping(value = "/hello") //返回的是JOSN字符串
 
     public String sayHello() {
         return "Hello SpringBoot ";

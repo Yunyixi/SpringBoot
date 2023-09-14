@@ -20,6 +20,7 @@ public class CustomInterceptor implements HandlerInterceptor {
                              Object handler) throws Exception {
         // 用户请求/admin开头的路径时，判断用户是否登录
         String uri = request.getRequestURI();
+        System.out.println("+++ uri ===" + uri);
         // 用户信息
         Object loginUser = request.getSession().getAttribute("loginUser");
         //url 是不是以/admin开头 并且loginUser为空
@@ -29,7 +30,7 @@ public class CustomInterceptor implements HandlerInterceptor {
             return false;
         }
         return true;
-        
+        //访问地址：http://localhost:8084/admin
     }
 
     @Override

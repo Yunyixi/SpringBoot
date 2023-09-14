@@ -43,7 +43,7 @@ public class chapterApplicationTest {
     private ValuePerson valuePerson;
     @Autowired
     private DBConnector dbConnector;
-    @Autowired
+    @Autowired //全局配置文件数据校验
     private PropertiesExample propertiesExample;
 
     //chapter03
@@ -54,7 +54,7 @@ public class chapterApplicationTest {
     @Autowired
     private RedisPersonRepository redisPersonRepository;
 
-    //chapter04
+    //chapter04 和 chapter05
     @Autowired
     private LoginController loginController;
 
@@ -120,9 +120,11 @@ public class chapterApplicationTest {
     }
 
     /*
-    @Test //chapter04测试方法
+    @Test //chapter04 和 chapter05 测试方法
     public void Chapter04() {
-        //在项目入口启动类运行
+        System.out.println(TAG + "单元测试返回的数据：" + loginController.saytoLoginPage());
+        // 主程序在项目入口启动类运行
     }
     */
+
 }
