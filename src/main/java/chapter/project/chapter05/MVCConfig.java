@@ -23,7 +23,7 @@ public class MVCConfig implements WebMvcConfigurer {
         registry.addViewController("/toLoginPage").setViewName("login");
         registry.addViewController("/login.html").setViewName("login");
         registry.addViewController("/web").setViewName("login");
-        registry.addViewController("/**").setViewName("login");
+        //registry.addViewController("/**").setViewName("login");
     }
 
     @Override //添加注册拦截器管理
