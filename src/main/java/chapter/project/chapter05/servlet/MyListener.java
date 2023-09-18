@@ -6,8 +6,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 /**
- * SpringBoot
- *
+ * @Name FeiLong
  * @Date 2023/9/14
  * @注释
  */
@@ -22,6 +21,6 @@ public class MyListener implements ServletContextListener {
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
         System.out.println("contextDestroyed ...");
     }
-    
+
 }
 

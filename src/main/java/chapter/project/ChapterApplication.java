@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
+ * @Name FeiLong
  * @Date 2023/9/6
  * @注释 入口启动类
  */
@@ -14,6 +15,7 @@ public class ChapterApplication {
     public static void main(String[] args) {
         SpringApplication.run(ChapterApplication.class, args);
         System.out.println("这是一个 Spring Boot 项目");
+        System.out.println("发哥66");
 
     }
 }

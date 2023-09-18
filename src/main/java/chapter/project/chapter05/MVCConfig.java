@@ -7,6 +7,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
+ * @Name FeiLong
  * @Date 2023/9/11
  * 实现WebMvcConfigurer接口，扩展MVC功能
  */
@@ -22,6 +23,7 @@ public class MVCConfig implements WebMvcConfigurer {
         registry.addViewController("/toLoginPage").setViewName("login");
         registry.addViewController("/login.html").setViewName("login");
         registry.addViewController("/web").setViewName("login");
+        registry.addViewController("/**").setViewName("login");
     }
 
     @Override //添加注册拦截器管理

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
+ * @Name FeiLong
  * @Date 2023/9/11
  * @注释 使用 @Value注入属性
  */

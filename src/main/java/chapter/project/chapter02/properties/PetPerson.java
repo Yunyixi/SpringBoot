@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * @Name FeiLong
  * @Date 2023/9/7
  * @注释 使用 @ConfigurationProperties注入属性
  */
