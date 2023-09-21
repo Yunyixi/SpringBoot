@@ -18,6 +18,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
@@ -67,8 +68,8 @@ public class chapterApplicationTest {
 
     @Test
     public void Chapter02() {
-        System.out.println("properties01单元测试返回的数据：" + petPerson);
-        System.out.println("properties01单元测试返回的数据：" + valuePerson);
+        System.out.println("properties02单元测试返回的数据：" + petPerson);
+        System.out.println("properties02单元测试返回的数据：" + valuePerson);
 
         dbConnector.configure(); //chapter02 connecor当前运行的配置环境
     }

@@ -24,12 +24,27 @@ public class CustomInterceptor implements HandlerInterceptor {
         System.out.println("+++ uri ===" + uri);
         // 用户信息
         Object loginUser = request.getSession().getAttribute("loginUser");
-        //url 是不是以/admin开头 并且loginUser为空
-        if (uri.startsWith("/admin") && null == loginUser) {
-            // 地址拦截替换
-            response.sendRedirect("/toLoginPage");
-            return false;
+        //url 是不是以 /admin,/user 开头 并且loginUser为空
+        if (uri.startsWith("/admin") || uri.startsWith("/login.html") && null == loginUser) {
+            // 检查用户是否登录
+            if (null == loginUser) {
+                //地址拦截替换
+                response.sendRedirect("/web");
+                return false;
+            }
         }
+
+       /* // 特定路径用于登录拦截
+        if (uri.startsWith("/admin")) {
+            // 用户信息
+            Object loginUser = request.getSession().getAttribute("loginUser");
+            // 检查用户是否登录
+            if (null == loginUser) {
+                // 地址拦截替换
+                response.sendRedirect("/web");
+                return false;
+            }
+        }*/
         return true;
         //访问地址：http://localhost:8084/admin
     }

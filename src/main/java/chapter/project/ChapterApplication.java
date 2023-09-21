@@ -2,6 +2,7 @@ package chapter.project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  * @Name FeiLong
@@ -14,8 +15,6 @@ public class ChapterApplication {
     // 主程序的启动方法
     public static void main(String[] args) {
         SpringApplication.run(ChapterApplication.class, args);
-        System.out.println("这是一个 Spring Boot 项目");
-        System.out.println("发哥66");
-
+        System.out.println("这是一个 Spring Boot 项目 发哥66，启动成功");
     }
 }
