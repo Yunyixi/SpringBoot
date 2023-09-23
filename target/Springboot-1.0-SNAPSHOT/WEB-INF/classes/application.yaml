@@ -1,0 +1,8 @@
+﻿#对实体类对Petperson进行属性配置
+properties-yaml:
+  id: 1002
+  name: zhangsan
+  hobby: [ ply,read,sleep ]
+  family: [ father,mother ]
+  map: { k1: v1 , k2: v2 }
+  pet: { type: cat, name: tom }

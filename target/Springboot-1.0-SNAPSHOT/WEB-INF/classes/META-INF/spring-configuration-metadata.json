@@ -1,0 +1,48 @@
+{
+  "groups": [
+    {
+      "name": "properties",
+      "type": "chapter.project.chapter02.properties.PetPerson",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    },
+    {
+      "name": "user",
+      "type": "chapter.project.chapter02.properties03.PropertiesExample",
+      "sourceType": "chapter.project.chapter02.properties03.PropertiesExample"
+    }
+  ],
+  "properties": [
+    {
+      "name": "properties.family",
+      "type": "java.lang.String[]",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    },
+    {
+      "name": "properties.hobby",
+      "type": "java.util.List",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    },
+    {
+      "name": "properties.id",
+      "type": "java.lang.Integer",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson",
+      "defaultValue": 0
+    },
+    {
+      "name": "properties.map",
+      "type": "java.util.Map",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    },
+    {
+      "name": "properties.name",
+      "type": "java.lang.String",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    },
+    {
+      "name": "properties.pet",
+      "type": "chapter.project.chapter02.properties.Pet",
+      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+    }
+  ],
+  "hints": []
+}

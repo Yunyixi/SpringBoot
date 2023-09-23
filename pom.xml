@@ -8,6 +8,7 @@
     <artifactId>Springboot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- 指定java版本 -->
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -123,7 +124,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-        
+
         <!-- 文件下载依赖 -->
         <dependency>
             <groupId>commons-io</groupId>
@@ -131,9 +132,16 @@
             <version>2.6</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
-    <!-- 这个插件，可以将应用打包成一个可执行的jar包  -->
+    <!-- Maven打包插件，这个插件，可以将应用打包成一个可执行的jar包  -->
+    <!-- java -jar  -->
     <build>
         <plugins>
             <plugin>
@@ -145,5 +153,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- War包打包依赖 -->
+    <description>Demo project for Spring Boot</description>
+    <packaging>war</packaging>
+    <!-- <properties> java版本上面有了可以不指定
+        <java.version>1.8</java.version>
+    </properties> -->
 
 </project>
