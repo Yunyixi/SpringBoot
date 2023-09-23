@@ -15,7 +15,7 @@ import java.io.IOException;
  * @Date 2023/9/14
  * @注释 自定义Servlet类
  */
-@Component
+@Component //注入Spring Boot容器中
 public class MyServlet extends HttpServlet {
 
     @Override
