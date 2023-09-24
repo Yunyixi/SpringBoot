@@ -13,6 +13,6 @@ import org.springframework.context.annotation.Profile;
 public class IntlDBConnector implements DBConnector {
     @Override
     public void configure() {
-        System.out.println("数据库环境Init");
+        System.out.println("数据库环境Init 8083");
     }
 }

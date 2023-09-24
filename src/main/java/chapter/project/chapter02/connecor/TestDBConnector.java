@@ -13,6 +13,6 @@ import org.springframework.context.annotation.Profile;
 public class TestDBConnector implements DBConnector {
     @Override
     public void configure() {
-        System.out.println("数据库实现方法Test");
+        System.out.println("数据库实现方法Test 8084");
     }
 }

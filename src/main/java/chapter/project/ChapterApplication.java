@@ -3,20 +3,24 @@ package chapter.project;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.Profile;
 
 /**
  * @Name FeiLong
  * @Date 2023/9/6
- * @注释 入口启动类
+ * @注释 项目入口启动类
  */
+@Configuration //定义该类是一个自定义配置类
+@ImportResource("classpath:customization.xml") // 加载指定自定义配置文件位置和名称
 @ServletComponentScan //自动扫描并注册实现了 ServletComponent 接口的类
 @SpringBootApplication //用注解标识的类作为SpringBoot的入口类（启动类）
-// @ImportResource("classpath:application.xml") //加载自定义xml配置文件配置
+//@Profile("test") //指定多环境类配置
 // public class ChapterApplication {
-
 //程序主类继承SpringBootServletInitializer，并重写config()方法
 public class ChapterApplication extends SpringBootServletInitializer {
 

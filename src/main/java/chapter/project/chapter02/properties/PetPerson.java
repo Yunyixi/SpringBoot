@@ -1,6 +1,7 @@
 package chapter.project.chapter02.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -14,6 +15,7 @@ import java.util.Map;
  */
 @Component //将类注入到Spring Boot容器中
 @ConfigurationProperties(prefix = "properties") //通过全局自定义文件赋值
+@EnableConfigurationProperties(PetPerson.class) //开启对应配置类的属性注入功能
 //@ConfigurationProperties(prefix = "properties-yaml") //通过yaml文件赋值
 public class PetPerson {
     private int id;

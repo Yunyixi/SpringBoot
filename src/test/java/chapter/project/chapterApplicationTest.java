@@ -23,6 +23,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @Name FeiLong
@@ -47,6 +48,8 @@ public class chapterApplicationTest {
     private DBConnector dbConnector;
     @Autowired //全局配置文件数据校验
     private PropertiesExample propertiesExample;
+    @Autowired
+    private ApplicationContext applicationContext;
 
     //chapter03
     @Autowired
@@ -57,8 +60,8 @@ public class chapterApplicationTest {
     private RedisPersonRepository redisPersonRepository;
 
     //chapter04 和 chapter05
-    @Autowired
-    private LoginController loginController;
+    //@Autowired
+    //private LoginController loginController;
 
     @Test //chapter01测试方法
     public void Chapter01() {
@@ -72,36 +75,41 @@ public class chapterApplicationTest {
         System.out.println("properties02单元测试返回的数据：" + valuePerson);
 
         dbConnector.configure(); //chapter02 connecor当前运行的配置环境
+
+        System.out.println("自定义xml配置文件是否注入：" + applicationContext.containsBean("XmlService"));
     }
 
 
     @Test //chapter03测试方法
     public void Chapter03() {
-        //查询MySQL数据信息操作
+        /*//查询MySQL数据信息操作
         System.out.println(batisCommentMapper.findById(1));
         System.out.println(batisCommentMapper.findById(4));
         BatisComment batisComment = new BatisComment();
-
         //更新MySQL数据信息操作
         batisComment.setId(7);
         batisComment.setContent("真好，点个赞");
         batisComment.setAuthor("小苏");
         batisCommentMapper.updateComment(batisComment);
-
         //插入MySQL数据信息操作
         batisComment.setContent("很好，挺不错的");
         batisComment.setAuthor("小发");
         batisComment.setaId(3);
         batisCommentMapper.insertComment(batisComment);
-
         //删除MySQL数据信息操作
-        batisCommentMapper.deleteComment(8);
+        batisCommentMapper.deleteComment(8);*/
 
-        //chapter02 jpa实现，实现数据操作
-        List<JpaDiscuss> jpalist = jpaDiscussRepository.findByAuthorNotNull();
-        System.out.println(jpalist);
+        //chapter03 jpa实现，使用JpaRepository内部方法进行数据操作
+        Optional<JpaDiscuss> optionalJpaDiscuss = jpaDiscussRepository.findById(1);
+        if (optionalJpaDiscuss.isPresent()) {
+            System.out.println(optionalJpaDiscuss.get());
+        }
+        System.out.println();
+        //使用方法名关键字进行数据操作
+        List<JpaDiscuss> jpaDiscussList = jpaDiscussRepository.findByAuthorNotNull();
+        System.out.println(jpaDiscussList);
 
-        //chapter02 redis实现，实现数据库操作
+        /*//chapter03 redis实现，实现数据库操作
         RedisPerson redisPerson = new RedisPerson("张", "有才");
         RedisPerson redisPerson2 = new RedisPerson("James", "Harden");
         // 创建并添加住址信息
@@ -119,6 +127,17 @@ public class chapterApplicationTest {
         RedisPerson save2 = redisPersonRepository.save(redisPerson2);
         System.out.println(save);
         System.out.println(save2);
+        // 向Redis数据库查询数据
+        List<RedisPerson> list = redisPersonRepository.findByAddress_City("北京");
+        System.out.println(list);
+        // 向Redis数据库更新数据
+        RedisPerson redisPerson1 = redisPersonRepository.findByFirstnameAndLastname("张", "有才").get(0);
+        redisPerson1.setLastname("小明");
+        RedisPerson update = redisPersonRepository.save(redisPerson1);
+        System.out.println(update);
+        //删除Redis数据
+        RedisPerson redisPerson3 = redisPersonRepository.findByFirstnameAndLastname("张", "小明").get(0);
+        redisPersonRepository.delete(redisPerson3);*/
     }
 
     /*
