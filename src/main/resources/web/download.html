@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>文件下载</title>
+    <link rel="stylesheet" th:href="@{/login/css/download.css}">
 </head>
 <body>
-<div style="margin-bottom: 10px">文件下载列表：</div>
+<div align="center"><h2>欢迎来到下载页面！</h2></div>
+<div>
+    <div class="search-container">
+        <input id="search-input" placeholder="输入关键词" type="text">
+        <button id="search-btn">搜索</button>
+    </div>
+</div>
+<div align="center" style="margin-bottom: 10px">文件下载列表：</div>
 <table>
     <tr>
         <td>bloglogo.jpg</td>
-        <td><a th:href="@{/download(filename='bloglogo.jpg')}">下载文件</a></td>
+        <td>
+            <button><a th:href="@{/download(filename='bloglogo.jpg')}">下载文件</a></button>
+        </td>
     </tr>
     <tr>
         <td>Spring数据访问.docx</td>
-        <td><a th:href="@{/download(filename='Spring数据访问.docx')}">
-            下载文件</a></td>
+        <td>
+            <button><a th:href="@{/download(filename='Spring数据访问.docx')}">下载文件</a></button>
+        </td>
     </tr>
 </table>
-
-<div style="margin-bottom: 10px">寒心 真正的心寒起于2023年9月23号！！！</div>
-<div style="margin-bottom: 10px">那种失望和寒心真的让人难以承受。我们不禁要问自己，这样的同学真的是我们想要珍惜的朋友吗？
-</div>
+<div align="center" style="margin-bottom: 10px"><p>发哥下载 · 快网2023</p></div>
 </body>
 </html>
