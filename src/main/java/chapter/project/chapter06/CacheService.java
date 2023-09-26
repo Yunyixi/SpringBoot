@@ -34,7 +34,7 @@ public class CacheService {
 
     // 根据id更新数据
     // 把数据库缓存保存到redis数据库，运行时先查询缓存，没有在运行数据库操作
-    @CachePut(cacheNames = "article", unless = "#result=null")
+    @CachePut(cacheNames = "article", key = "#result=null")
     //@Cacheable(cacheNames = "article") //对数据库操作方法进行默认缓存管理
     public JpaCache updateComment(JpaCache jpaCache) {
         jpaCacheRepository.updateComment(jpaCache.getTitle(), jpaCache.getId());
@@ -43,7 +43,7 @@ public class CacheService {
 
     // 根据id删除数据
     // 把数据库缓存保存到redis数据库，运行时先查询缓存，没有在运行数据库操作
-    @CachePut(cacheNames = "article", unless = "#result=null")
+    @CachePut(cacheNames = "article")
     //@Cacheable(cacheNames = "article") //对数据库操作方法进行默认缓存管理
     public void deleteComment(int article_id) {
         jpaCacheRepository.deleteById(article_id);
