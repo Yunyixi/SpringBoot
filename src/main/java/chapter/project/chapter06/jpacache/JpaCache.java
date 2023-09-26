@@ -1,6 +1,4 @@
-package chapter.project.chapter06;
-
-import org.springframework.data.annotation.Id;
+package chapter.project.chapter06.jpacache;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,7 +10,7 @@ import java.io.Serializable;
  * @注释 Spring Boot默认缓存管理
  */
 @Entity(name = "t_article") //实体类映射的数据库的表名
-public class CacheComment implements Serializable { //实现序列化接口，不然可能 缓存 报错
+public class JpaCache implements Serializable { //实现序列化接口，不然可能 缓存 报错
     @javax.persistence.Id //标记实体类中的主键字段
     @GeneratedValue(strategy = GenerationType.IDENTITY) //设置主键自增策略
     private Integer id;
@@ -45,7 +43,7 @@ public class CacheComment implements Serializable { //实现序列化接口，�
 
     @Override
     public String toString() {
-        return "CacheComment{" +
+        return "JpaCache{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
