@@ -25,7 +25,8 @@
     {
       "name": "properties.id",
       "type": "java.lang.Integer",
-      "sourceType": "chapter.project.chapter02.properties.PetPerson"
+      "sourceType": "chapter.project.chapter02.properties.PetPerson",
+      "defaultValue": 0
     },
     {
       "name": "properties.map",
