@@ -26,7 +26,8 @@ public class MVCConfig implements WebMvcConfigurer {
         //registry.addViewController("/**").setViewName("login");
     }
 
-    @Override //添加注册拦截器管理
+    @Override
+    //添加注册拦截器管理
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(customInterceptor)
                 .addPathPatterns("/**") // 拦截所有的路径

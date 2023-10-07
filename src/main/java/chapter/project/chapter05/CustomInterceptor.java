@@ -32,19 +32,11 @@ public class CustomInterceptor implements HandlerInterceptor {
                 response.sendRedirect("/web");
                 return false;
             }
+        } else {
+            // 任意路径重定向到 /login.html 页面
+            response.sendRedirect("/login.html");
+            return false;
         }
-
-       /* // 特定路径用于登录拦截
-        if (uri.startsWith("/admin")) {
-            // 用户信息
-            Object loginUser = request.getSession().getAttribute("loginUser");
-            // 检查用户是否登录
-            if (null == loginUser) {
-                // 地址拦截替换
-                response.sendRedirect("/web");
-                return false;
-            }
-        }*/
         return true;
         //访问地址：http://localhost:8084/admin
     }
