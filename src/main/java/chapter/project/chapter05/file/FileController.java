@@ -19,11 +19,11 @@ import java.util.UUID;
 /**
  * @Name FeiLong
  * @Date 2023/9/18
- * @注释 文件控制管理类
+ * @注释 文件控制管理类 文件的上传与下载
  */
 @Controller
 public class FileController {
-    // 5.1文件上传
+    // 5.3.1文件上传
     // 向文件上传页面跳转，页面映射
     @GetMapping("/toUpload") //http://localhost:8084/toUpload
     public String toUpload() {
@@ -58,7 +58,7 @@ public class FileController {
         return "upload";
     }
 
-    // 5.2文件下载
+    // 5.3.2文件下载
     // 向文件下载页面跳转，页面映射
     @GetMapping("/toDownload") //http://localhost:8084/toDownload
     public String toDownload() {
