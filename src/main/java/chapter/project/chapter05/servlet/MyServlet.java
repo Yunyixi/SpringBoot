@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * @Name FeiLong
  * @Date 2023/9/14
- * @注释 自定义Servlet类
+ * @注释 自定义Servlet类 使用组件注册方式整合Servlet
  */
 @Component //注入Spring Boot容器中
 public class MyServlet extends HttpServlet {

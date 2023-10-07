@@ -9,6 +9,7 @@ import java.io.IOException;
  * @Name FeiLong
  * @Date 2023/9/14
  * @注释 实现javax.servlet.Filter接口 自定义 Filter 类
+ * 使用组件注册方式整合 Filter
  */
 @Component
 public class MyFilter implements Filter {

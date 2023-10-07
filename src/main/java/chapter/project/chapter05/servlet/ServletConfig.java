@@ -10,7 +10,7 @@ import java.util.Arrays;
 /**
  * @Name FeiLong
  * @Date 2023/9/14
- * @注释
+ * @注释 使用路径扫描方式整合 Servlet Filter
  */
 @Configuration
 public class ServletConfig {

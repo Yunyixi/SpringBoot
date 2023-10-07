@@ -8,7 +8,7 @@ import javax.servlet.ServletContextListener;
 /**
  * @Name FeiLong
  * @Date 2023/9/14
- * @注释
+ * @注释 使用组件注册方式整合 Listener
  */
 @Component
 public class MyListener implements ServletContextListener {
