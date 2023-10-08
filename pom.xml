@@ -143,7 +143,7 @@
     </dependencies>
 
     <!-- Maven打包插件，这个插件，可以将应用打包成一个可执行的jar包  -->
-    <!-- java -jar  -->
+    <!-- 运行：java -jar  -->
     <build>
         <plugins>
             <plugin>
@@ -156,7 +156,7 @@
         </plugins>
     </build>
 
-    <!-- War包打包依赖 -->
+    <!-- War包打包依赖 将包打包成War包-->
     <description>Demo project for Spring Boot</description>
     <packaging>war</packaging>
     <!-- <properties> java版本上面有了可以不指定

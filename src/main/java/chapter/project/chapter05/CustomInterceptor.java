@@ -32,11 +32,11 @@ public class CustomInterceptor implements HandlerInterceptor {
                 response.sendRedirect("/web");
                 return false;
             }
-        } else {
+        } /*else {
             // 任意路径重定向到 /login.html 页面
             response.sendRedirect("/login.html");
             return false;
-        }
+        }*/
         return true;
         //访问地址：http://localhost:8084/admin
     }

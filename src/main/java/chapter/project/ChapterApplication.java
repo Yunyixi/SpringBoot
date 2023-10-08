@@ -33,7 +33,7 @@ public class ChapterApplication extends SpringBootServletInitializer {
 
     }
 
-    //重写config()方法
+    //重写config()方法，5.4 war包需要
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(ChapterApplication.class);
