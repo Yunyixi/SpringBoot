@@ -14,6 +14,6 @@ public interface JpaCacheRepository extends JpaRepository<JpaCache, Integer> {
     @Transactional
     @Modifying
     @Query("UPDATE t_article c SET c.title= ?1 WHERE  c.id = ?2")
-    int updateComment(String title, Integer id);
+    int updateCache(String title, Integer id);
 }
 

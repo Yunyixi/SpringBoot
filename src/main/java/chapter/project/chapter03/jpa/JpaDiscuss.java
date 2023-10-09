@@ -5,7 +5,7 @@ import javax.persistence.*;
 /**
  * @Name FeiLong
  * @Date 2023/9/5
- * @注释
+ * @注释 实体类存放 t_comment 表对象字段
  */
 @Entity(name = "t_comment")
 public class JpaDiscuss {

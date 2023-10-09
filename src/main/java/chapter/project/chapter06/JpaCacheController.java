@@ -1,10 +1,10 @@
-package chapter.project.chapter06.jpacache;
+package chapter.project.chapter06;
 
-import chapter.project.chapter06.CacheService;
+import chapter.project.chapter06.jpacache.CacheService;
+import chapter.project.chapter06.jpacache.JpaCache;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 
 /**
  * @Name FeiLong
@@ -17,7 +17,7 @@ public class JpaCacheController {
     private CacheService cacheService;
 
     // 查询
-    @GetMapping("/get/{id}") //http://localhost:8084/get/3
+    @GetMapping("/get/{id}") //http://localhost:8084/get/2
     public JpaCache findById(@PathVariable("id") int article_id) {
         JpaCache jpaCache = cacheService.findById(article_id);
         return jpaCache;
@@ -25,11 +25,11 @@ public class JpaCacheController {
 
     // 更新
     @GetMapping("/update/{id}/{title}") //http://localhost:8084/update/1/update
-    public JpaCache updateComment(@PathVariable("id") int article_id,
-                                  @PathVariable("title") String title) {
+    public JpaCache updateCache(@PathVariable("id") int article_id,
+                                @PathVariable("title") String title) {
         JpaCache jpaCache = cacheService.findById(article_id);
         jpaCache.setTitle(title);
-        JpaCache updateComment = cacheService.updateComment(jpaCache);
+        JpaCache updateComment = cacheService.updateCache(jpaCache);
         return updateComment;
     }
 
@@ -37,7 +37,7 @@ public class JpaCacheController {
     @GetMapping("/delete/{id}") //http://localhost:8084/delete/3
     public void deleteComment(@PathVariable("id") int article_id) {
 
-        cacheService.deleteComment(article_id);
+        cacheService.deleteCache(article_id);
     }
 
 }

@@ -11,7 +11,8 @@ import java.io.Serializable;
  */
 @Entity(name = "t_article") //实体类映射的数据库的表名
 public class JpaCache implements Serializable { //实现序列化接口，不然可能 缓存 报错
-    @javax.persistence.Id //标记实体类中的主键字段
+
+    @Id //标记实体类中的主键字段
     @GeneratedValue(strategy = GenerationType.IDENTITY) //设置主键自增策略
     private Integer id;
     private String title;

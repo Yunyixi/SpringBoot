@@ -1,10 +1,7 @@
 package chapter.project.chapter05.file;
 
 import org.apache.commons.io.FileUtils;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -69,7 +66,7 @@ public class FileController {
 //    @GetMapping("/download")
 //    public ResponseEntity<byte[]> fileDownload(String filename){
 //        // 指定要下载的文件根路径
-//        String dirPath = "F:/file/";
+//        String dirPath = "D:/Recording/SpringBootData/";
 //        // 创建该文件对象
 //        File file = new File(dirPath + File.separator + filename);
 //        // 设置响应头

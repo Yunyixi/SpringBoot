@@ -21,7 +21,7 @@ public class CustomInterceptor implements HandlerInterceptor {
                              Object handler) throws Exception {
         // 用户请求/admin开头的路径时，判断用户是否登录
         String uri = request.getRequestURI();
-        System.out.println("+++ uri ===" + uri);
+        System.out.println("访问的路径：+++ uri ===" + uri);
         // 用户信息
         Object loginUser = request.getSession().getAttribute("loginUser");
         //url 是不是以 /admin,/user 开头 并且loginUser为空
