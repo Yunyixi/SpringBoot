@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @Name FeiLong
  * @Date 2023/9/25
- * @注释 浏览器访问页面控制类
+ * @注释 Spring Boot 默认缓存体验 浏览器访问页面控制类
  */
 @RestController
 public class JpaCacheController {
