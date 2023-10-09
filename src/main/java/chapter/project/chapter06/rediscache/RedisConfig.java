@@ -14,7 +14,7 @@ import java.time.Duration;
 /**
  * @Name FeiLong
  * @Date 2023/10/8
- * @注释 缓存序列化机制
+ * @注释 缓存序列化机制 配置类
  */
 @Configuration //定义一个配置类
 public class RedisConfig {

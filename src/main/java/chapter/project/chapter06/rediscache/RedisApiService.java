@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @Name FeiLong
  * @Date 2023/10/8
- * @注释
+ * @注释 基于Api的Redis缓存实现
  */
 @Service
 public class RedisApiService {

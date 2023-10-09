@@ -1,13 +1,8 @@
 package chapter.project.chapter06.jpacache;
 
 
-import chapter.project.chapter06.jpacache.JpaCache;
-import chapter.project.chapter06.jpacache.JpaCacheRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

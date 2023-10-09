@@ -16,12 +16,14 @@ public class RedisApiController {
     @Autowired
     private RedisApiService redisApiService;
 
+    //查询
     @GetMapping("/get/{id}") //http://localhost:8084/api/get/2
     public JpaDiscuss findById(@PathVariable("id") int comment_id) {
         JpaDiscuss comment = redisApiService.findById(comment_id);
         return comment;
     }
 
+    //更新
     @GetMapping("/update/{id}/{author}")
     public JpaDiscuss updateComment(@PathVariable("id") int comment_id,
                                     @PathVariable("author") String author) {
@@ -31,6 +33,7 @@ public class RedisApiController {
         return updateComment;
     }
 
+    //删除
     @GetMapping("/delete/{id}") //http://localhost:8084/api/delete/6
     public void deleteComment(@PathVariable("id") int comment_id) {
         redisApiService.deleteComment(comment_id);
