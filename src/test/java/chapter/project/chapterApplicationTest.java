@@ -7,13 +7,8 @@ import chapter.project.chapter02.properties02.ValuePerson;
 import chapter.project.chapter02.properties03.PropertiesExample;
 import chapter.project.chapter03.batis.BatisComment;
 import chapter.project.chapter03.batis.BatisCommentMapper;
-import chapter.project.chapter03.jpa.JpaDiscuss;
 import chapter.project.chapter03.jpa.JpaDiscussRepository;
-import chapter.project.chapter03.redis.RedisAddress;
-import chapter.project.chapter03.redis.RedisFamily;
-import chapter.project.chapter03.redis.RedisPerson;
 import chapter.project.chapter03.redis.RedisPersonRepository;
-import chapter.project.chapter04.LoginController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +16,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * @Name FeiLong
@@ -59,10 +51,6 @@ public class chapterApplicationTest {
     @Autowired
     private RedisPersonRepository redisPersonRepository;
 
-    //chapter04 和 chapter05
-    //@Autowired
-    //private LoginController loginController;
-
     @Test //chapter01测试方法
     public void Chapter01() {
 
@@ -82,7 +70,7 @@ public class chapterApplicationTest {
 
     @Test //chapter03测试方法
     public void Chapter03() {
-        /*//查询MySQL数据信息操作
+        //查询MySQL数据信息操作
         System.out.println(batisCommentMapper.findById(1));
         System.out.println(batisCommentMapper.findById(4));
         BatisComment batisComment = new BatisComment();
@@ -97,55 +85,6 @@ public class chapterApplicationTest {
         batisComment.setaId(3);
         batisCommentMapper.insertComment(batisComment);
         //删除MySQL数据信息操作
-        batisCommentMapper.deleteComment(8);*/
-
-        //chapter03 jpa实现，使用JpaRepository内部方法进行数据操作
-        Optional<JpaDiscuss> optionalJpaDiscuss = jpaDiscussRepository.findById(1);
-        if (optionalJpaDiscuss.isPresent()) {
-            System.out.println(optionalJpaDiscuss.get());
-        }
-        System.out.println();
-        //使用方法名关键字进行数据操作
-        List<JpaDiscuss> jpaDiscussList = jpaDiscussRepository.findByAuthorNotNull();
-        System.out.println(jpaDiscussList);
-
-        /*//chapter03 redis实现，实现数据库操作
-        RedisPerson redisPerson = new RedisPerson("张", "有才");
-        RedisPerson redisPerson2 = new RedisPerson("James", "Harden");
-        // 创建并添加住址信息
-        RedisAddress redisAddress = new RedisAddress("北京", "China");
-        redisPerson.setRedisAddress(redisAddress);
-        // 创建并添加家庭成员
-        List<RedisFamily> redislist = new ArrayList<>();
-        RedisFamily dad = new RedisFamily("父亲", "张良");
-        RedisFamily mom = new RedisFamily("母亲", "李香君");
-        redislist.add(dad);
-        redislist.add(mom);
-        redisPerson.setRedisFamilyList(redislist);
-        // 向Redis数据库添加数据
-        RedisPerson save = redisPersonRepository.save(redisPerson);
-        RedisPerson save2 = redisPersonRepository.save(redisPerson2);
-        System.out.println(save);
-        System.out.println(save2);
-        // 向Redis数据库查询数据
-        List<RedisPerson> list = redisPersonRepository.findByAddress_City("北京");
-        System.out.println(list);
-        // 向Redis数据库更新数据
-        RedisPerson redisPerson1 = redisPersonRepository.findByFirstnameAndLastname("张", "有才").get(0);
-        redisPerson1.setLastname("小明");
-        RedisPerson update = redisPersonRepository.save(redisPerson1);
-        System.out.println(update);
-        //删除Redis数据
-        RedisPerson redisPerson3 = redisPersonRepository.findByFirstnameAndLastname("张", "小明").get(0);
-        redisPersonRepository.delete(redisPerson3);*/
+        batisCommentMapper.deleteComment(8);
     }
-
-    /*
-    @Test //chapter04 和 chapter05 测试方法
-    public void Chapter04() {
-        System.out.println(TAG + "单元测试返回的数据：" + loginController.saytoLoginPage());
-        // 主程序在项目入口启动类运行
-    }
-    */
-
 }

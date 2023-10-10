@@ -2,7 +2,6 @@ package chapter.project.chapter06.rediscache;
 
 import chapter.project.chapter03.jpa.JpaDiscuss;
 import chapter.project.chapter03.jpa.JpaDiscussRepository;
-import chapter.project.chapter06.jpacache.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @Name FeiLong
  * @Date 2023/10/8
- * @注释 基于Api的Redis缓存实现
+ * @注释 基于 Api 的Redis缓存实现
  */
 @Service
 public class RedisApiService {
@@ -35,8 +34,8 @@ public class RedisApiService {
                 // 将查询结果进行缓存，并设置有效期为1天
                 redisTemplate.opsForValue().set("comment_" + comment_id, comment, 1, TimeUnit.DAYS);
 
-//                redisTemplate.opsForValue().set("comment_"+comment_id,comment);
-//                redisTemplate.expire("comment_"+comment_id,90,TimeUnit.SECONDS);
+                // redisTemplate.opsForValue().set("comment_" + comment_id, comment);
+                // redisTemplate.expire("comment_" + comment_id, 90, TimeUnit.SECONDS);
 
                 return comment;
             } else {

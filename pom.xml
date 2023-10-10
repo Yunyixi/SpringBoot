@@ -140,6 +140,24 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- chapter07 security安全框架依赖启动器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- chapter07 JDBC连接数据库的依赖启动器 -->
+        <!--  JDBC数据库连接启动器  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <!--  MySQL数据连接驱动  -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <!-- Maven打包插件，这个插件，可以将应用打包成一个可执行的jar包  -->
