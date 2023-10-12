@@ -46,5 +46,6 @@ public class LoginLocalResovel implements LocaleResolver {
     @Bean
     public LocaleResolver localeResolver() {
         return new LoginLocalResovel();
+
     }
 }

@@ -12,10 +12,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class Chapter07Controller {
 
-    //  影片详情页
+    // 影片详情页
     @GetMapping("/detail/{type}/{path}")
     public String toDetail(@PathVariable("type") String type, @PathVariable("path") String path) {
         return "detail/" + type + "/" + path;
     }
+
+    // 自定义用户登录
+    @GetMapping("/userLogin")
+    public String toLoginPage() {
+        return "login/login";
+    }
+
 
 }

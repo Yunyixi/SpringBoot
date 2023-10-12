@@ -4,6 +4,7 @@ package chapter.project.chapter07;
 import chapter.project.chapter07.udservice.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -44,6 +45,30 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         */
         //3、使用 UserDetailsService 进行身份认证
         auth.userDetailsService(userDetailsService).passwordEncoder(encoder);
+    }
+
+    @Override // 自定义用户访问控制
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers("/").permitAll()
+                // 需要对 static 文件夹下静态资源进行统一放行
+                .antMatchers("/login/**").permitAll()
+                .antMatchers("/detail/common/**").hasRole("common")
+                .antMatchers("/detail/vip/**").hasRole("vip")
+                .anyRequest().authenticated();
+
+        // 自定义用户登录控制
+        http.formLogin()
+                .loginPage("/userLogin").permitAll()
+                .usernameParameter("name").passwordParameter("pwd")
+                .defaultSuccessUrl("/")
+                .failureUrl("/userLogin?error");
+
+        // 自定义用户退出登录控制
+        http.logout()
+                .logoutUrl("/mylogout")
+                .logoutSuccessUrl("/");
+        
     }
 
 }

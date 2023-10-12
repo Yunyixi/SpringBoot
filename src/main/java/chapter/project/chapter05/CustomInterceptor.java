@@ -21,11 +21,11 @@ public class CustomInterceptor implements HandlerInterceptor {
                              Object handler) throws Exception {
         // 用户请求/admin开头的路径时，判断用户是否登录
         String uri = request.getRequestURI();
-        System.out.println("访问的路径：+++ uri ===" + uri);
+        System.out.println("访问的路径：+++ uri === http://localhost:8084" + uri);
         // 用户信息
         Object loginUser = request.getSession().getAttribute("loginUser");
         //url 是不是以 /admin,/user 开头 并且loginUser为空
-        if (uri.startsWith("/admin") || uri.startsWith("/login.html") && null == loginUser) {
+        if (uri.startsWith("/admin") || uri.startsWith("/login1.html") && null == loginUser) {
             // 检查用户是否登录
             if (null == loginUser) {
                 //地址拦截替换
@@ -33,8 +33,8 @@ public class CustomInterceptor implements HandlerInterceptor {
                 return false;
             }
         } /*else {
-            // 任意路径重定向到 /login.html 页面
-            response.sendRedirect("/login.html");
+            // 任意路径重定向到 /login1.html 页面
+            response.sendRedirect("/login1.html");
             return false;
         }*/
         return true;
