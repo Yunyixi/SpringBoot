@@ -13,8 +13,7 @@ import java.util.List;
 /**
  * @Name FeiLong
  * @Date 2023/9/6
- * @注释 定义查询用户及角色信息的服务窗口
- * 对用户数据结合 Redis 缓存进行处理，获取用户信息和用户权限信息
+ * @注释 对用户数据结合 Redis 缓存进行处理
  */
 @Service
 public class CustomerService {
