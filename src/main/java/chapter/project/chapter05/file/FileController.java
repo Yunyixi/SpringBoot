@@ -22,9 +22,9 @@ import java.util.UUID;
 public class FileController {
     // 5.3.1文件上传
     // 向文件上传页面跳转，页面映射
-    @GetMapping("/toUpload") //http://localhost:8084/toUpload
+    @GetMapping("/filetoUpload") //http://localhost:8084/toUpload
     public String toUpload() {
-        return "upload";
+        return "fileupload";
     }
 
     // 文件上传
@@ -52,7 +52,7 @@ public class FileController {
             }
         }
         // 携带上传状态信息回调到文件上传页面
-        return "upload";
+        return "fileupload";
     }
 
     // 5.3.2文件下载

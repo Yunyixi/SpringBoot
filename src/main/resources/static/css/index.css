@@ -1,29 +1,17 @@
 body {
+    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 h1 {
-    background-color: #4CAF50;
-    color: white;
     text-align: center;
-    padding: 20px;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-
-div {
-    margin: 20px;
+    font-size: 2em;
+    color: #333;
 }
 
 h3 {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
+    font-size: 1.5em;
+    color: #666;
 }
 
 ul {
@@ -32,14 +20,22 @@ ul {
 }
 
 li {
+    font-size: 1em;
+    color: #333;
     margin-bottom: 10px;
 }
 
 a {
-    color: #4CAF50;
     text-decoration: none;
+    color: #0077cc;
 }
 
 a:hover {
-    color: #45a049;
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    font-size: 1em;
+    color: #999;
 }

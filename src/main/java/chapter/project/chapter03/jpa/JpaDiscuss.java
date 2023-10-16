@@ -1,6 +1,7 @@
 package chapter.project.chapter03.jpa;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @Name FeiLong
@@ -8,7 +9,7 @@ import javax.persistence.*;
  * @注释 实体类存放 t_comment 表对象字段
  */
 @Entity(name = "t_comment")
-public class JpaDiscuss {
+public class JpaDiscuss implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -58,5 +59,6 @@ public class JpaDiscuss {
                 ", aId=" + aId +
                 '}';
     }
+
 }
 
