@@ -35,7 +35,7 @@ public class CSRFController {
         System.out.println(password);
         String csrf_token = request.getParameter("_csrf");
         System.out.println(csrf_token);
-        customerRepository.updateCache(username, 3);
+        customerRepository.updateCache(username, 1);
         return "OK，已完成更新";
     }
 
