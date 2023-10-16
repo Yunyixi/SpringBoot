@@ -148,16 +148,16 @@
 
         <!-- chapter07 JDBC连接数据库的依赖启动器 -->
         <!--  JDBC数据库连接启动器  -->
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>-->
+        </dependency>
         <!--  MySQL数据连接驱动  -->
-        <!--<dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-        </dependency>-->
+        </dependency>
 
         <!-- SpringSecurity5依赖启动器 进行页面显示控制-->
         <!-- https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity5 -->
