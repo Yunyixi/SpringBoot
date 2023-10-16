@@ -20,7 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     protected DataSource dataSource;
 
-    /*@Override
+    @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         //  密码需要设置编码器
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("shitou").password(encoder.encode("123456")).roles("common")
                 .and()
                 .withUser("李四").password(encoder.encode("123456")).roles("vip");
-    }*/
+    }
 
 }
 
