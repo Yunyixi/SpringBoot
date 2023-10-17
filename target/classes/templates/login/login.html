@@ -7,9 +7,18 @@
     <link rel="stylesheet" th:href="@{/login/css/signin.css}">
     <script>
         function showCurrentTime() {
-            var currentTime = new Date();
-            document.getElementById("currentTime").innerHTML = currentTime.toLocaleString();
+            const currentTime = new Date();
+            const year = currentTime.getFullYear();
+            const month = currentTime.getMonth() + 1;
+            const day = currentTime.getDate();
+            const hours = currentTime.getHours();
+            let minutes = currentTime.getMinutes();
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            document.getElementById("currentTime").innerHTML = year + "-" + month + "-" + day + " " + hours + ":" + minutes;
         }
+
     </script>
 </head>
 <body class="text-center" onload="showCurrentTime()">

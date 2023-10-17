@@ -3,13 +3,11 @@ package chapter.project.chapter07;
 
 import chapter.project.chapter07.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 
 import javax.sql.DataSource;
 
@@ -71,24 +69,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/mylogout")
                 .logoutSuccessUrl("/");
 
-        // 定制Remember-me记住我功能
-        http.rememberMe()
-                .rememberMeParameter("rememberme")
-                .tokenValiditySeconds(10) // 有效期时间
-                //.tokenValiditySeconds(200)
-                // 对Cookie信息进行持久化处理
-                .tokenRepository(tokenRepository()); // 基于持久化 Token
-
-        // 关闭Spring Security默认开启的CSRf功能
-        http.csrf().disable();
-    }
-
-    // 基于持久化 Token
-    @Bean //会在持久化数据表 persistent_logins 生成对应信息
-    public JdbcTokenRepositoryImpl tokenRepository() {
-        JdbcTokenRepositoryImpl jr = new JdbcTokenRepositoryImpl();
-        jr.setDataSource(dataSource);
-        return jr;
     }
 
 }
