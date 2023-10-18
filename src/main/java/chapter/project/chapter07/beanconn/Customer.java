@@ -26,6 +26,7 @@ public class Customer implements Serializable { // 手动序列化
         this.password = password;
     }
 
+
     public Integer getId() {
         return id;
     }

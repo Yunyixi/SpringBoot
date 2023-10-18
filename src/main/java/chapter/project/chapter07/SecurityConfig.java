@@ -79,6 +79,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // 对Cookie信息进行持久化处理
                 .tokenRepository(tokenRepository()); // 基于持久化 Token
 
+        // 关闭Spring Security默认开启的CSRf功能
+        http.csrf().disable();
     }
 
     // 基于持久化 Token
