@@ -161,12 +161,11 @@
 
         <!-- SpringSecurity5依赖启动器 进行页面显示控制-->
         <!-- https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity5 -->
-        <!--<dependency>
+        <dependency>
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity5</artifactId>
-        </dependency>-->
-
-
+        </dependency>
+        
     </dependencies>
 
     <!-- Maven打包插件，这个插件，可以将应用打包成一个可执行的jar包  -->

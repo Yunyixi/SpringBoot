@@ -10,13 +10,13 @@
 
 <h1 align="center" style="color: #333;">欢迎进入电影网站首页</h1>
 
-<!--<div sec:authorize="isAnonymous()" style="text-align: center; margin-bottom: 20px;">
+<div sec:authorize="isAnonymous()" style="text-align: center; margin-bottom: 20px;">
     <h2>游客您好，如果想查看电影<a style="color: #007bff; text-decoration: none;" th:href="@{/userLogin}">请登录</a></h2>
-</div>-->
+</div>
 <div sec:authorize="isAuthenticated()" style="text-align: center; margin-bottom: 20px;">
-    <!--<h2><span sec:authentication="name" style="color: #007bff"></span>
+    <h2><span sec:authentication="name" style="color: #007bff"></span>
         您好，您的用户权限为<span sec:authentication="principal.authorities"
-                                 style="color:darkkhaki"></span>，您有权观看以下电影</h2>-->
+                                 style="color:darkkhaki"></span>，您有权观看以下电影</h2>
     <form method="post" style="display: inline-block;" th:action="@{/mylogout}">
         <input type="submit" value="注销"/>
     </form>
