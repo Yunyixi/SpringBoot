@@ -21,7 +21,7 @@ public class CustomerService {
     private CustomerRepository customerRepository;
     @Autowired
     private AuthorityRepository authorityRepository;
-    @Autowired
+    @Autowired // Redis缓存模板,操作 Redis 缓存
     private RedisTemplate redisTemplate;
 
     // 控制：使用唯一用户名查询用户信息

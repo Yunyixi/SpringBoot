@@ -10,7 +10,7 @@ import javax.transaction.Transactional;
 /**
  * @Name FeiLong
  * @Date 2023/9/6
- * @注释
+ * @注释 实体类接口实现对数据库的操作
  */
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
     Customer findByUsername(String username);

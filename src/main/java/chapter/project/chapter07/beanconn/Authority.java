@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * @Name FeiLong
  * @Date 2023/9/6
- * @注释
+ * @注释 实体类
  */
 @Entity(name = "t_authority ")
 public class Authority implements Serializable {

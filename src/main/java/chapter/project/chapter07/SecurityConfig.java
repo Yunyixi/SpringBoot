@@ -28,7 +28,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        //  密码需要设置编码器
+        // 四种登录身份认证，全局变量文件可进行基础 用户密码 设置，优先级最低
+        // 密码需要设置编码器
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 /*
         // 1、使用内存用户信息，作为测试使用
