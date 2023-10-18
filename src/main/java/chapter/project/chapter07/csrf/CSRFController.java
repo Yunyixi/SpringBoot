@@ -1,8 +1,6 @@
 package chapter.project.chapter07.csrf;
 
-import chapter.project.chapter07.beanconn.Customer;
 import chapter.project.chapter07.beanconn.CustomerRepository;
-import chapter.project.chapter07.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
@@ -16,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @Name FeiLong
  * @Date 2023/10/14
- * @注释
+ * @注释 CSRF防护功能关闭，用户信息控制类
  */
 @Controller
 public class CSRFController {
